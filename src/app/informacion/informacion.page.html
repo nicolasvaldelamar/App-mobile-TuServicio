@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div class="header-container">
+        <div class="containerh">
+          <ion-avatar>
+            <img [src]="profileImage ? profileImage : 'https://res.cloudinary.com/duebiduhx/image/upload/v1669200909/v-network/b7uwnz1priapdvfe9e8o.png'">
+          </ion-avatar>
+          <ion-button fill="clear" (click)="editProfileImage()" [style]="user.id !== 'e' ? '' : ''">
+            <ion-icon name="camera"></ion-icon>
+            Editar foto
+          </ion-button>
+
+        </div>
+        <ion-button fill="clear" >
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" >
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <h2>{{user.name}} {{user.lastname}}</h2>
+      <p>Correo Electrónico: {{user.email}}</p>
+      <p>Ciudad: Ciudad Ejemplo</p>
+      <p>Dirección: Dirección Ejemplo</p>
+      <p>username: {{user.username}}</p>
+      <p>Horario Disponible: 9:00 AM - 5:00 PM</p>
+      <p>Descripción: {{user.descripcion}}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Servicios
+    </ion-card-header>
+    <ion-card-content>
+      
+      <!-- Aquí puedes agregar los servicios que ofrece el usuario -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

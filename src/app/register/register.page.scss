@@ -1,0 +1,38 @@
+
+
+main{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.boton_regitrarse{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 50px;
+    width: 88%;
+    margin: 0 auto;
+    border-radius: 2px;
+    height: 10%;
+}
+
+.main{
+    height: 100%;
+    margin-top: 50px;
+
+}
+
+ion-item{
+    padding: 0px 20px;
+   
+    margin-bottom: 30px;
+    
+}
+
+
+ion-content{
+    overflow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

@@ -1,0 +1,159 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="line-height: 24px; text-align: center;">
+      Bienvenid@ {{user.username}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-segment [(ngModel)]="segmentValue">
+      <ion-segment-button value="proveedores">
+        <ion-label>Proveedores</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="misservicios">
+        <ion-label>Mis servicios</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-item>
+  <div *ngIf="segmentValue === 'proveedores'">
+    <!-- Contenido para Proveedores -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Proveedores</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Aquí puedes agregar el contenido específico para Proveedores -->
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="segmentValue === 'misservicios'">
+    <!-- Contenido para Mis servicios -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Mis servicios</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="full">
+          <ion-icon name="add" ></ion-icon>
+          CREAR NUEVO SERVICIO
+        </ion-button>
+        <!-- Aquí puedes agregar el contenido específico para Mis servicios -->
+        <hr/>
+          <p>Lista de servicios</p>
+          <ion-list>
+            <ion-card class="custom-card">
+              <ion-ripple-effect></ion-ripple-effect>
+            
+              <ion-card-header class="custom-card-header">
+                <ion-card-title>Creación de páginas web</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content class="custom-card-content">
+                <p>Desarrollo de páginas web y labores de SEO y posicionamiento en la web</p>
+              </ion-card-content>
+              <ion-row class="custom-card-footer">
+                <ion-col >
+                  <ion-button expand="full" color="primary">Ver</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="tertiary">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="success">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            <ion-card class="custom-card">
+              <ion-ripple-effect></ion-ripple-effect>
+            
+              <ion-card-header class="custom-card-header">
+                <ion-card-title>Creación de páginas web</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content class="custom-card-content">
+                <p>Desarrollo de páginas web y labores de SEO y posicionamiento en la web</p>
+              </ion-card-content>
+              <ion-row class="custom-card-footer">
+                <ion-col >
+                  <ion-button expand="full" color="primary">Ver</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="tertiary">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="success">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            <ion-card class="custom-card">
+              <ion-ripple-effect></ion-ripple-effect>
+            
+              <ion-card-header class="custom-card-header">
+                <ion-card-title>Creación de páginas web</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content class="custom-card-content">
+                <p>Desarrollo de páginas web y labores de SEO y posicionamiento en la web</p>
+              </ion-card-content>
+              <ion-row class="custom-card-footer">
+                <ion-col >
+                  <ion-button expand="full" color="primary">Ver</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="tertiary">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="success">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            <ion-card class="custom-card">
+              <ion-ripple-effect></ion-ripple-effect>
+            
+              <ion-card-header class="custom-card-header">
+                <ion-card-title>Creación de páginas web</ion-card-title>
+              </ion-card-header>
+            
+              <ion-card-content class="custom-card-content">
+                <p>Desarrollo de páginas web y labores de SEO y posicionamiento en la web</p>
+              </ion-card-content>
+              <ion-row class="custom-card-footer">
+                <ion-col >
+                  <ion-button expand="full" color="primary">Ver</ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="tertiary">
+                    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+                <ion-col size="4">
+                  <ion-button expand="full" color="success">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+            
+          </ion-list>
+
+       
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+</ion-content>

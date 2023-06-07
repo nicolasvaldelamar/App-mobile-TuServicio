@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+      Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-alert
+  trigger="present-alert"
+  header="Alerta"
+  subHeader="{{titulo}}"
+  message="{{mensaje}}"
+  [buttons]="alertButtons"
+></ion-alert> 
+
+<div class="main">
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input [(ngModel)]="user.name" required name="name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input [(ngModel)]="user.lastname" required name="lastname"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Nombre de usuario</ion-label>
+    <ion-input [(ngModel)]="user.username" required name="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Correo electrónico</ion-label>
+    <ion-input type="email" [(ngModel)]="user.email" name="email" required #emailInput="ngModel"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="user.password" required name="password" required></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label>Selecciona un rol:</ion-label>
+    <ion-select [(ngModel)]="user.role">
+      <ion-select-option value="normal">normal</ion-select-option>
+      <ion-select-option value="proveedor">proveedor</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <ion-button class="boton_regitrarse" expand="full" [disabled]="!areInputsEmpty()" (click)="register()">Registrarse</ion-button>
+  <span style="display:block; width: 100%; text-align: center; margin-top: 10px; margin-bottom: 100px; padding-bottom: 100px;">¿Ya tienes una cuenta? <a href="/login">Iniciar sesion</a></span>
+</div>
+ 
+</ion-content>
