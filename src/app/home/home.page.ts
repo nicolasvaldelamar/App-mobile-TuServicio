@@ -29,7 +29,7 @@ export class HomePage {
       return;
     }
     const datos2 = JSON.parse(datos);
-    const data = await this.authService.login(datos2);
+    const data = await this.authService.login(datos2.user);
     const results = await this.authService.traerDatos(data.user);
     console.log("DATOS DEL USER", results);
     this.user.username = results.results.username;

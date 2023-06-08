@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { InformacionPage } from './informacion/informacion.page';
 
 const routes: Routes = [
   {
@@ -24,16 +25,16 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
-    path: 'informacion',
-    loadChildren: () => import('./informacion/informacion.module').then( m => m.InformacionPageModule)
+    path: 'informacion/:id',
+    component: InformacionPage
   },
   {
     path: 'agenda',
     loadChildren: () => import('./agenda/agenda.module').then( m => m.AgendaPageModule)
   },
   {
-    path: 'post-registro',
-    loadChildren: () => import('./post-registro/post-registro.module').then( m => m.PostRegistroPageModule)
+    path: 'edit-info',
+    loadChildren: () => import('./edit-info/edit-info.module').then( m => m.EditInfoPageModule)
   },
 
 ];

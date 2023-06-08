@@ -18,7 +18,7 @@ const routes: Routes = [
       pathMatch: 'full'
     },
     {
-      path: 'informacion',
+      path: 'informacion/:id',
       loadChildren: () => import('../informacion/informacion.module').then( m => m.InformacionPageModule)
     },
     {

@@ -37,7 +37,8 @@ export class AuthService {
   }
 
   async traerDatos(credentials: any){
-    const url = `${this.baseURL}/searchuser?username=${credentials.username}&password=${credentials.password}`;
+    console.log("CREDENCIALES PARA TRAER DATOS", credentials) 
+    const url = `${this.baseURL}/searchuser?id=${credentials}`;
     const response = await fetch(url,{
       method: 'GET',
       headers: {
@@ -46,6 +47,20 @@ export class AuthService {
     })
     const data = await response.json();
     console.log("DATA DEL USER", data);
+    return data;
+  }
+  async updatePhoto(credentials: any){
+    console.log(credentials, "Log de esto")
+    const url = `${this.baseURL}/updatephoto?username=${credentials.username}&password=${credentials.password}&newimage=${credentials.newimage}`;
+    const response = await fetch(url,{
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(credentials)
+    })
+    const data = await response.json();
+    console.log("DATA DEL USERi", data);
     return data;
   }
 }

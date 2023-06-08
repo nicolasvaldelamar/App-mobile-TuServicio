@@ -11,29 +11,36 @@
     <ion-card-content>
       <div class="header-container">
         <div class="containerh">
-          <ion-avatar>
+          <ion-avatar style="width: 50%; height: 50%; margin: 0 auto;">
             <img [src]="profileImage ? profileImage : 'https://res.cloudinary.com/duebiduhx/image/upload/v1669200909/v-network/b7uwnz1priapdvfe9e8o.png'">
           </ion-avatar>
-          <ion-button fill="clear" (click)="editProfileImage()" [style]="user.id !== 'e' ? '' : ''">
+          <ion-button fill="clear" (click)="editProfileImage()" [style]="user.id !== delStorage.id ? 'display: none;' : 'display: block'">
             <ion-icon name="camera"></ion-icon>
             Editar foto
           </ion-button>
 
         </div>
-        <ion-button fill="clear" >
-          <ion-icon name="notifications-outline"></ion-icon>
-        </ion-button>
-        <ion-button fill="clear" >
-          <ion-icon name="chatbubbles-outline"></ion-icon>
-        </ion-button>
+        <div style="width: 100%; margin: 0 auto;display: flex;
+        justify-content: center;">
+          <ion-button fill="clear" >
+            <ion-icon name="notifications-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" >
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+          </ion-button>
+        </div>
+        
       </div>
       <h2>{{user.name}} {{user.lastname}}</h2>
-      <p>Correo Electrónico: {{user.email}}</p>
-      <p>Ciudad: Ciudad Ejemplo</p>
-      <p>Dirección: Dirección Ejemplo</p>
+      <hr/>
+      <h5><b style="font-size: 16pt;">Datos:</b></h5>
+      <p>Correo electrónico: {{user.email}}</p>
+      <p>Ciudad: {{user.city}}</p>
+      <p>Dirección: {{user.adress}}</p>
       <p>username: {{user.username}}</p>
       <p>Horario Disponible: 9:00 AM - 5:00 PM</p>
-      <p>Descripción: {{user.descripcion}}</p>
+      <p>Descripción</p><br/>
+      <p>{{user.descripcion}}</p>
     </ion-card-content>
   </ion-card>
 

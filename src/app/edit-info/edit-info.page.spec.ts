@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PostRegistroPage } from './post-registro.page';
+import { EditInfoPage } from './edit-info.page';
 
-describe('PostRegistroPage', () => {
-  let component: PostRegistroPage;
-  let fixture: ComponentFixture<PostRegistroPage>;
+describe('EditInfoPage', () => {
+  let component: EditInfoPage;
+  let fixture: ComponentFixture<EditInfoPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(PostRegistroPage);
+    fixture = TestBed.createComponent(EditInfoPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

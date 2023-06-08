@@ -20,10 +20,10 @@ export class LoginComponent {
 
   async login() {
     const data = await this.authService.login(this.credentials);
-    console.log("DATA DEL USUARIO", data);
+    console.log("DATA DEL USUARIO ja", data);
     if (data.message === 'Inicio de sesión exitoso') {
       // redireccionar a la página de inicio
-      localStorage.setItem('credentials', JSON.stringify(data.user))
+      localStorage.setItem('credentials', JSON.stringify(data))
       this.router.navigateByUrl('/tabs/home');
     }
   if (data.message === 'Inicio de sesión exitoso') {
