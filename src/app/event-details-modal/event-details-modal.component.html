@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalles del Evento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ event.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Fecha: {{ event.date | date:'dd/MM/yyyy' }}</p>
+      <!-- Agrega aquí más detalles o propiedades del evento -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

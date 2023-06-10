@@ -28,18 +28,22 @@
           <ion-button fill="clear" >
             <ion-icon name="chatbubbles-outline"></ion-icon>
           </ion-button>
+          <ion-button fill="clear" >
+            <ion-icon name="add"></ion-icon>
+          </ion-button>
         </div>
         
       </div>
-      <h2>{{user.name}} {{user.lastname}}</h2>
+      <h2 style="text-align: center;">{{user.name}} {{user.lastname}}</h2>
+      <h4 style="text-align: center; font-weight: 900;">{{user.username}}</h4>
       <hr/>
       <h5><b style="font-size: 16pt;">Datos:</b></h5>
       <p>Correo electrónico: {{user.email}}</p>
       <p>Ciudad: {{user.city}}</p>
       <p>Dirección: {{user.adress}}</p>
-      <p>username: {{user.username}}</p>
+     
       <p>Horario Disponible: 9:00 AM - 5:00 PM</p>
-      <p>Descripción</p><br/>
+      <p style="font-size: 16pt; font-weight: 900;">Descripción:</p><br/>
       <p>{{user.descripcion}}</p>
     </ion-card-content>
   </ion-card>

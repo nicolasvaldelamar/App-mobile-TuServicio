@@ -1,13 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>agenda</ion-title>
+    <ion-title>Agenda</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">agenda</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label>Fecha:</ion-label>
+    <ion-datetime display-format="DD/MM/YYYY" min="2023-06-10" max="2024-06-10" [(ngModel)]="selectedDate"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Título del evento:</ion-label>
+    <ion-input [(ngModel)]="newEventTitle"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" (click)="addEvent()">Agregar Evento</ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let event of events" (click)="openEventDetails(event)">
+      <ion-label>{{ event.title }}</ion-label>
+      <ion-note slot="end">{{ event.date | date:'MMM d' }}</ion-note>
+    </ion-item>
+  </ion-list>
+  
 </ion-content>
